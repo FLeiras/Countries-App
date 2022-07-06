@@ -20,7 +20,6 @@ const initialState = {
   copyCountries: [],
   activity: [],
   countryDetails: [],
-  sortCountries: [],
 };
 
 function rootReducer(state = initialState, action) {
@@ -44,7 +43,7 @@ function rootReducer(state = initialState, action) {
     case SORT_COUNTRIES:
       return {
         ...state,
-        sortCountries: sortCountries(action.payload, state.countries),
+        countries: sortCountries(action.payload, state.countries),
       };
     case FILTER_BY_CONTINENT:
       return {
