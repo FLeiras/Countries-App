@@ -42,6 +42,25 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const activityToDelete = await Activity.findOne({
+      where: {
+        id: id,
+      },
+    });
+
+    if (!activityToDelete) {
+      return res.status(404).send("Activity not found");
+    }
+    await activityToDelete.destroy();
+    res.send("Activity deleted successfully");
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
+
 /* router.put("/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -69,24 +88,5 @@ router.post("/", async (req, res) => {
     res.status(400).send(error);
   }
 });*/
-
-router.delete("/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const activityToDelete = await Activity.findOne({
-      where: {
-        id: id,
-      },
-    });
-
-    if (!activityToDelete) {
-      return res.status(404).send("Activity not found");
-    }
-    await activityToDelete.destroy();
-    res.send("Activity deleted successfully");
-  } catch (error) {
-    res.status(400).send(error);
-  }
-});
 
 module.exports = router;
