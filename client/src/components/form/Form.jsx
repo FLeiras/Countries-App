@@ -35,10 +35,17 @@ const Form = () => {
   }
 
   function handleSelect(e) {
-    setInput({
-      ...input,
-      country: [...input.country, e.target.value],
-    });
+    if (!input.country.includes(e.target.value)) {
+      setInput({
+        ...input,
+        country: [...input.country, e.target.value],
+      });
+      setError(
+        validate({ ...input, country: [...input.country, e.target.value] })
+      );
+    } else {
+      alert("Debes seleccionar al menos un pais");
+    }
   }
 
   function handleSubmit(e) {
@@ -52,14 +59,14 @@ const Form = () => {
       input.country.length === 0
     ) {
       e.preventDefault();
-      alert("All fields must be completed");
+      alert("Debe completar todos los campos");
     } else if (input.country.includes(input.country.name)) {
       e.preventDefault();
       alert("Country already selected");
     } else {
       e.preventDefault();
       dispatch(postActivity(input));
-      alert("Activity was created successfully");
+      alert("Actividad creada correctamente");
       setInput({
         name: "",
         difficult: "",
@@ -81,21 +88,25 @@ const Form = () => {
   function validate(input) {
     let error = {};
     if (input.name.length < 3) {
-      error.name = "Name of activity must be valid";
+      error.name = "Ingrese un nombre valido";
     }
     if (!input.name.match(/^[A-Za-z]+$/)) {
-      error.name = "Name of activity must contain only letters";
+      error.name = "El nombre debe contener solo letras";
     }
     if (!input.duration) {
-      error.duration = "Duration must be specified in hours";
+      error.duration = "La duracion debe especificarse en Horas";
     }
     if (!input.season) {
-      error.season = "Season is required";
+      error.season = "Season es un campo obligatorio";
     }
     if (!input.difficult) {
-      error.difficult = "Difficult is required";
+      error.difficult = "Difficult es un campo obligatorio";
     }
     return error;
+  }
+
+  function SortArray(x, y) {
+    return x.input.value.localeCompare(y.input.value);
   }
 
   return (

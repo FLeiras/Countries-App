@@ -72,8 +72,9 @@ h1 {
 
 .error {
   margin-top: -1.5rem;
-  margin-left: 12.5rem;
+  margin-left: 14rem;
   margin-bottom: 0.5rem;
+  font-size: 20px;
 }
 
 .form .actDifficult label {
@@ -138,7 +139,7 @@ h1 {
 
 .cou {
   position: absolute;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   margin-left: 12rem;
 }
 
@@ -155,19 +156,22 @@ h1 {
 }
 
 .errorDif {
-  margin-left: 16rem;
+  margin-left: 12rem;
+  font-size: 20px;
 }
 
 .errorDur {
   position: absolute;
   margin-top: -1.8rem;
-  margin-left: 12.5rem;
+  margin-left: 10rem;
+  font-size: 20px;
 }
 
 .errorSeason {
   position: absolute;
   margin-top: 1.5rem;
-  margin-left: 17rem;
+  margin-left: 13rem;
+  font-size: 20px;
 }
 
 .container1 {
