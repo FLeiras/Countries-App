@@ -22,10 +22,16 @@ function Home() {
   const allCountries = useSelector((state) => state.countries);
   const allActivity = useSelector((state) => state.activity);
   const [currentPage, setCurrentPage] = useState(1);
-  const [countriesPerPage] = useState(10);
-  const lastCountry = currentPage * countriesPerPage;
-  const firstCountry = lastCountry - countriesPerPage;
-  const currentCountry = allCountries.slice(firstCountry, lastCountry);
+  const countriesPerPage = 10;
+  const lastIndex = currentPage * countriesPerPage;
+  const firstIndex = lastIndex - countriesPerPage;
+  /* console.log(allCountries); */
+  let currentCountry = [];
+  parseInt(currentPage) === 1
+    ? (currentCountry = allCountries.slice(0, 9))
+    : (currentCountry = allCountries.slice(firstIndex - 1, lastIndex - 1));
+  /* console.log(currentPage); */
+
   const paginado = (numPage) => {
     setCurrentPage(numPage);
   };
@@ -78,7 +84,9 @@ function Home() {
           }}
           className={Styles.buttonRecarga}
         >
-          <img src={Recarga} alt="Country" className={Styles.recarga} />
+          <div className={Styles.imgRecarga}>
+            <img src={Recarga} alt="Country" className={Styles.recarga} />
+          </div>
         </button>
       </div>
       <div>
@@ -154,7 +162,7 @@ function Home() {
               key={e.id}
             />
           ))
-        ) : (
+        ) : !currentCountry && loading ? (
           <img
             src={giphy}
             alt="Loading"
@@ -162,6 +170,11 @@ function Home() {
             width="500px"
             height="500px"
           />
+        ) : (
+          <div className={Styles.notFound}>
+            <h1>"Oops!! No hay resultados..."</h1>
+            <h3>Recarga tu pagina</h3>
+          </div>
         )}
       </div>
     </div>

@@ -10,21 +10,21 @@ export const getCountries = () => {
   };
 };
 
-export const getCountryById = (id) => {
-  return async function (dispatch) {
-    const response = await axios.get("http://localhost:3001/countries/" + id);
-    return dispatch({
-      type: "GET_COUNTRY_BY_ID",
-      payload: response.data,
-    });
-  };
-};
-
 export const getActivity = () => {
   return async function (dispatch) {
     const response = await axios.get("http://localhost:3001/activity");
     return dispatch({
       type: "GET_ACTIVITY",
+      payload: response.data,
+    });
+  };
+};
+
+export const getCountryById = (id) => {
+  return async function (dispatch) {
+    const response = await axios.get("http://localhost:3001/countries/" + id);
+    return dispatch({
+      type: "GET_COUNTRY_BY_ID",
       payload: response.data,
     });
   };

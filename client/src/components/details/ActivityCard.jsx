@@ -1,16 +1,17 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+
 import { useDispatch } from "react-redux";
 import styles from "./Activity.module.css";
 import { deleteActivity } from "../../redux/actions";
 
 const ActivityCard = (activity) => {
-  const { id } = useParams();
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    dispatch(deleteActivity(id));
+    dispatch(deleteActivity(activity.id));
   };
+
+  console.log(activity.id);
 
   return (
     <div className={styles.container}>

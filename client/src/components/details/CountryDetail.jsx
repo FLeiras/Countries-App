@@ -84,6 +84,7 @@ function CountryDetail() {
 
         {country.activities?.map((e) => (
           <ActivityCard
+            id={e.id}
             name={e.name}
             difficult={e.difficult}
             duration={e.duration}

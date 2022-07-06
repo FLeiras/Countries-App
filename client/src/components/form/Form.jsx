@@ -15,7 +15,7 @@ const Form = () => {
     name: "",
     difficult: "",
     duration: "",
-    season: "",
+    season: [],
     country: [],
   });
 
@@ -44,7 +44,7 @@ const Form = () => {
         validate({ ...input, country: [...input.country, e.target.value] })
       );
     } else {
-      alert("Debes seleccionar al menos un pais");
+      alert("Este pais ya fue seleccionado");
     }
   }
 
@@ -60,9 +60,6 @@ const Form = () => {
     ) {
       e.preventDefault();
       alert("Debe completar todos los campos");
-    } else if (input.country.includes(input.country.name)) {
-      e.preventDefault();
-      alert("Country already selected");
     } else {
       e.preventDefault();
       dispatch(postActivity(input));
@@ -103,10 +100,6 @@ const Form = () => {
       error.difficult = "Difficult es un campo obligatorio";
     }
     return error;
-  }
-
-  function SortArray(x, y) {
-    return x.input.value.localeCompare(y.input.value);
   }
 
   return (

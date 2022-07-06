@@ -59,7 +59,12 @@ export const findCountries = (name, arr) => {
 };
 
 export const searchCountry = (name, arr) => {
-  return arr.filter((e) =>
-    e.name.toLowerCase().includes(name.toString().toLowerCase())
-  );
+  switch (name) {
+    case "":
+      return arr;
+    default:
+      return arr.filter((e) =>
+        e.name.toLowerCase().includes(name.toString().toLowerCase())
+      );
+  }
 };

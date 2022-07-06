@@ -42,7 +42,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.put("/:id", async (req, res) => {
+/* router.put("/:id", async (req, res) => {
   try {
     const { id } = req.params;
     let updateActivity = await Activity.findOne({
@@ -68,14 +68,17 @@ router.put("/:id", async (req, res) => {
   } catch (error) {
     res.status(400).send(error);
   }
-});
+});*/
 
 router.delete("/:id", async (req, res) => {
   try {
-    const { id, countryId } = req.params;
-    const activityToDelete =
-      (await Activity.findByPk(id)) &&
-      (await Country_activities.findByPk(countryId));
+    const { id } = req.params;
+    const activityToDelete = await Activity.findOne({
+      where: {
+        id: id,
+      },
+    });
+
     if (!activityToDelete) {
       return res.status(404).send("Activity not found");
     }
