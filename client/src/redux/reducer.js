@@ -7,12 +7,14 @@ import {
   SEARCH_COUNTRIES,
   FILTER_BY_ACTIVITY,
   DELETE_ACTIVITY,
+  FILTER_NUEVO,
 } from "./actions";
 import {
   sortCountries,
   countryByContinent,
   filterByActivity,
   searchCountry,
+  populationFilter,
 } from "./utils";
 
 const initialState = {
@@ -63,6 +65,11 @@ function rootReducer(state = initialState, action) {
     case DELETE_ACTIVITY:
       return {
         ...state,
+      };
+    case FILTER_NUEVO:
+      return {
+        ...state,
+        countries: populationFilter(state.copyCountries),
       };
     default:
       return state;

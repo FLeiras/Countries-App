@@ -77,6 +77,13 @@ export function deleteActivity(payload) {
   };
 }
 
+export function filtroNuevo(payload) {
+  return {
+    type: "FILTER_NUEVO",
+    payload,
+  };
+}
+
 export const GET_COUNTRIES = "GET_COUNTRIES";
 export const GET_COUNTRY_BY_ID = "GET_COUNTRY_BY_ID";
 export const GET_ACTIVITY = "GET_ACTIVITY";
@@ -85,3 +92,4 @@ export const FILTER_BY_CONTINENT = "FILTER_BY_CONTINENT";
 export const SEARCH_COUNTRIES = "SEARCH_COUNTRIES";
 export const FILTER_BY_ACTIVITY = "FILTER_BY_ACTIVITY";
 export const DELETE_ACTIVITY = "DELETE_ACTIVITY";
+export const FILTER_NUEVO = "FILTER_NUEVO";
