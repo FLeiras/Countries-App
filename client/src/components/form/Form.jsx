@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getCountries, postActivity } from "../../redux/actions";
-import styles from "./Form.module.css";
+import styles from "../../Styles/Form.module.css";
 import imgHome from "../../images/menuForm.png";
 
 const Form = () => {
@@ -283,6 +283,11 @@ const Form = () => {
               <div>
                 <button className={styles.submitbtn} type="submit">
                   Create
+                </button>
+              </div>
+              <div>
+                <button className={styles.submitbtnUp} type="submit">
+                  Update
                 </button>
               </div>
             </div>

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { getCountryById /* , clearState */ } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Styles from "./CountryDetail.module.css";
+import Styles from "../../Styles/CountryDetail.module.css";
 import giphy from "../../images/giphy.gif";
 import ActivityCard from "./ActivityCard";
 

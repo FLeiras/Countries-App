@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap");
 
 .major {
-  background-image: url("../../images/home3.jpg");
+  background-image: url("../images/home3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -242,13 +242,37 @@ h1 {
   font-weight: bold;
   letter-spacing: 2px;
   right: -10px;
-  bottom: 30px;
+  bottom: 90px;
   cursor: pointer;
   transition: all 0.25s ease;
   box-shadow: -5px 6px 20px 0px rgba(51, 51, 51, 0.4);
 }
 
 .container1 .submitbtn:hover {
+  background-color: #d4a373;
+}
+
+.container1 .submitbtnUp {
+  position: absolute;
+  border-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #d4a373;
+  font-family: "Ubuntu";
+  color: #432818;
+  padding: 12px 25px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  right: -10px;
+  bottom: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: -5px 6px 20px 0px rgba(51, 51, 51, 0.4);
+}
+
+.container1 .submitbtnUp:hover {
   background-color: #d4a373;
 }
 

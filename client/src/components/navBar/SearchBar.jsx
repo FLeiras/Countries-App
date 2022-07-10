@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { searchCountries } from "../../redux/actions";
-import Styles from "./SearchBar.module.css";
+import Styles from "../../Styles/SearchBar.module.css";
 
 function SearchBar() {
   const dispatch = useDispatch();

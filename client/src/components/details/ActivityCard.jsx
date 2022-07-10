@@ -1,17 +1,43 @@
 import React from "react";
-
-import { useDispatch } from "react-redux";
-import styles from "./Activity.module.css";
-import { deleteActivity } from "../../redux/actions";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import styles from "../../Styles/Activity.module.css";
+import { deleteActivity, updateActivity } from "../../redux/actions";
+import { useState } from "react";
 
 const ActivityCard = (activity) => {
   const dispatch = useDispatch();
+  const updateActivities = useSelector((state) => state.copyCountries);
+  const [updateAct, setUpdateAct] = useState(false);
+
+  const [input, setInput] = useState({
+    name: "",
+    difficult: "",
+    duration: "",
+    season: "",
+  });
 
   const handleDelete = () => {
     dispatch(deleteActivity(activity.id));
   };
 
-  console.log(activity.id);
+  const handleUpdate = () => {
+    if (activity.id && updateActivities.name && !updateAct) {
+      setInput({
+        ...input,
+        name: updateActivities.name,
+        difficult: updateActivities.difficult,
+        duration: updateActivities.duration,
+        season: updateActivities.season,
+        country: updateActivities.country,
+      });
+      setInput(!updateAct);
+    }
+    /* if (activity.id) {
+      dispatch(updateActivity(activity.id, input));
+      alert("Actividad Modificada");
+    } */
+  };
 
   return (
     <div className={styles.container}>
@@ -39,10 +65,11 @@ const ActivityCard = (activity) => {
       <div className={styles.btnDel}>
         <button onClick={handleDelete}>Delete</button>
       </div>
-
-      <div className={styles.btnEd}>
-        <button>Edit</button>
-      </div>
+      <Link to="/post">
+        <div className={styles.btnEd}>
+          <button onClick={handleUpdate}>Edit</button>
+        </div>
+      </Link>
     </div>
   );
 };

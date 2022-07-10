@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Styles from "./LandingPage.module.css";
+import Styles from "../../Styles/LandingPage.module.css";
 
 function LandingPage() {
   return (
-    <div className={Styles.Pricontainer}>
-      <div className={Styles.titleLanding}>
+    <div className={Styles.container}>
+      <div className={Styles.titlelanding}>
         <h3>Welcome to</h3>
         <h1>Country-App</h1>
         <p>
@@ -18,7 +18,7 @@ function LandingPage() {
         </p>
       </div>
       <Link to="/home">
-        <div className={Styles.container}>
+        <div className={Styles.containerbtn}>
           <div className={Styles.center}>
             <button className={Styles.btn}>
               <svg

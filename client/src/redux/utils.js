@@ -1,5 +1,7 @@
 export const sortCountries = (order, array) => {
   switch (order) {
+    case "All":
+      return array;
     case "asc":
       return array.sort((a, b) => {
         return a.name.localeCompare(b.name);

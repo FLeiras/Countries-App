@@ -7,11 +7,10 @@ import {
   sortByName,
   filterByContinent,
   filterByActivity,
-  filtroNuevo,
 } from "../../redux/actions";
 import Card from "../UI/Card";
 import Paginado from "../home/Paginado";
-import Styles from "./Home.module.css";
+import Styles from "../../Styles/Home.module.css";
 import Nav from "../navBar/Nav";
 import Recarga from "../../images/recarga.png";
 import giphy from "../../images/giphy.gif";
@@ -26,12 +25,10 @@ function Home() {
   const countriesPerPage = 10;
   const lastIndex = currentPage * countriesPerPage;
   const firstIndex = lastIndex - countriesPerPage;
-  /* console.log(allCountries); */
   let currentCountry = [];
   parseInt(currentPage) === 1
     ? (currentCountry = allCountries.slice(0, 9))
     : (currentCountry = allCountries.slice(firstIndex - 1, lastIndex - 1));
-  /* console.log(currentPage); */
 
   const paginado = (numPage) => {
     setCurrentPage(numPage);
@@ -97,7 +94,7 @@ function Home() {
           }}
           className={Styles.filterPopu}
         >
-          <option> Order by population </option>
+          <option value="All"> Order by population </option>
           <option value="may"> Elderly </option>
           <option value="men"> Minor </option>
         </select>
@@ -107,7 +104,7 @@ function Home() {
           }}
           className={Styles.filterName}
         >
-          <option> Order by name </option>
+          <option value="All"> Order by name </option>
           <option value="asc">A-Z</option>
           <option value="des">Z-A</option>
         </select>
@@ -172,10 +169,12 @@ function Home() {
             height="500px"
           />
         ) : (
-          <div className={Styles.notFound}>
-            <h1>"Oops!! No hay resultados..."</h1>
-            <h3>Recarga tu pagina</h3>
-          </div>
+          currentCountry && (
+            <div className={Styles.notFound}>
+              <h1>"Oops!! No hay resultados..."</h1>
+              <h3>Recarga tu pagina</h3>
+            </div>
+          )
         )}
       </div>
     </div>

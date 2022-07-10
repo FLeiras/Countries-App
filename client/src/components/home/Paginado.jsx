@@ -1,5 +1,5 @@
 import { React, Fragment } from "react";
-import Styles from "../home/Paginado.module.css";
+import Styles from "../../Styles/Paginado.module.css";
 
 export default function Paginado({ countriesPerPage, allCountries, paginado }) {
   const currentPage = [];
