@@ -7,13 +7,13 @@ import {
   sortByName,
   filterByContinent,
   filterByActivity,
-} from "../../redux/actions";
-import Card from "../UI/Card";
-import Paginado from "../home/Paginado";
-import Styles from "../../Styles/Home.module.css";
-import Nav from "../navBar/Nav";
-import Recarga from "../../images/recarga.png";
-import giphy from "../../images/giphy.gif";
+} from "../redux/actions";
+import Card from "./Card";
+import Paginado from "./Paginado";
+import Styles from "../Styles/Home.module.css";
+import Nav from "./Nav";
+import Recarga from "../images/recarga.png";
+import giphy from "../images/giphy.gif";
 
 function Home() {
   const [, setRefreshState] = useState(false);
@@ -72,7 +72,7 @@ function Home() {
 
   return (
     <div className={Styles.container}>
-      <div>
+      <div className={Styles.nav_bar}>
         <Nav />
       </div>
       <div>

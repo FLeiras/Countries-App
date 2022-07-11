@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../../Styles/SobreMi.module.css";
+import Styles from "../Styles/SobreMi.module.css";
 import Imagen from "./Img/PERN.png";
 import { Link } from "react-router-dom";
 import JS from "./Img/js.png";

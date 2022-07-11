@@ -2,8 +2,6 @@
 
 .landing_container {
   background-image: url("../images/landing2.jpg");
-  /* display: flex;
-  flex-direction: column; */
   align-items: center;
   padding: 0;
   background-repeat: no-repeat;
@@ -15,66 +13,37 @@
 .titlelanding {
   display: flex;
   float: right;
-  margin: 3rem;
+  margin: 2.5rem;
   flex-direction: column;
   align-items: center;
 }
 
 .titlelanding h1 {
-  /* display: flex;
-  float: right;
-  justify-content: flex-end; 
-    margin: 10rem 14rem;
-*/
   font-family: "Ubuntu";
   font-size: 75px;
-  margin: 15px 0px 10px 0px; 
-
+  margin: -1rem 0px 8rem 0px;
 }
 
 .titlelanding h3 {
-  /* position: absolute;
-  display: flex;
-  float: right; */
-  margin: 5rem 16.7rem;
+  margin: 2rem 15rem 0.5rem;
   justify-content: flex-end;
   font-family: "Ubuntu";
   font-size: 65px;
-  margin: 0px;
 }
 
 .titlelanding p {
-  /* position: absolute;
-  display: flex; 
-  margin: 22.5rem 2rem;*/
   text-align: center;
-  font-size: 28px;
+  font-size: 32px;
   font-family: "Kanit";
   margin-bottom: 30px;
 }
 
-.p_container{
+.p_container {
   width: 600px;
-}
-.containerbtn {
-  width: 400px;
-  height: 100px;
-  position: absolute;
-  left: 93rem;
-  top: 52.5rem;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.center {
-  /* width: 180px;
-  height: 60px;
-  position: absolute; */
 }
 
 .btn {
+  margin-top: 5rem;
   width: 180px;
   height: 60px;
   cursor: pointer;
@@ -85,441 +54,112 @@
   border-radius: 1rem;
 }
 
-svg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  fill: none;
-  stroke: rgb(253, 253, 253);
-  stroke-dasharray: 150 480;
-  stroke-dashoffset: 150;
-  transition: 1s ease-in-out;
-  border-radius: 1rem;
-}
-
 .btn:hover {
   transition: 1s ease-in-out;
   background: #39affe;
 }
 
-.btn:hover svg {
-  stroke-dashoffset: -480;
-}
-
 .btn span {
   color: rgb(68, 71, 196);
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 100;
 }
 
 @media (max-width: 420px) {
   .titlelanding h1 {
     font-family: "Ubuntu";
-    font-size: 25px;
-    margin: 15px 0px 10px 0px; 
-  
+    font-size: 40px;
+    margin: -5px 50px 50px 0px;
   }
-  
+
+  .titlelanding h3 {
+    margin: 0px 0px 0px -50px;
+    justify-content: flex-end;
+    font-family: "Ubuntu";
+    font-size: 35px;
+  }
+
+  .titlelanding p {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Kanit";
+    margin-bottom: 50px;
+    margin-left: -50px;
+  }
+  .p_container {
+    width: 250px;
+  }
+
+  .btn {
+    margin-top: -1rem;
+    margin-left: -2.5rem;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #91c9ff;
+    outline: none;
+    transition: 1s ease-in-out;
+    border-radius: 1rem;
+  }
+
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: #39affe;
+  }
+
+  .btn span {
+    color: rgb(68, 71, 196);
+    font-size: 18px;
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 1200px) {
+  .titlelanding h1 {
+    font-family: "Ubuntu";
+    font-size: 40px;
+    margin: -5px 0px 50px 0px;
+  }
+
   .titlelanding h3 {
     margin: 5rem 16.7rem;
     justify-content: flex-end;
     font-family: "Ubuntu";
-    font-size: 20px;
+    font-size: 35px;
     margin: 0px;
   }
-  
+
   .titlelanding p {
     text-align: center;
-    font-size: 15px;
+    font-size: 22px;
     font-family: "Kanit";
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
-  .p_container{
+  .p_container {
     width: 250px;
   }
 
+  .btn {
+    margin-top: -1rem;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #91c9ff;
+    outline: none;
+    transition: 1s ease-in-out;
+    border-radius: 1rem;
+  }
 
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: #39affe;
+  }
+
+  .btn span {
+    color: rgb(68, 71, 196);
+    font-size: 18px;
+    font-weight: 100;
+  }
 }
-
-  /* .container {
-    background-image: none;
-    background-color: bisque;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .container .titlelanding h1 {
-    display: flex;
-    margin: 3.5rem 17rem 0 -15rem;
-    font-family: "Ubuntu";
-    font-size: 25px;
-  }
-
-  .titlelanding h3 {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    float: right;
-    margin: 2.5rem 4.7rem;
-    justify-content: flex-end;
-    font-family: "Ubuntu";
-    font-size: 20px;
-  }
-
-  .titlelanding p {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 8.5rem 0.3rem;
-    text-align: center;
-    font-size: 10px;
-    font-family: "Kanit";
-  }
-
-  .containerbtn {
-    position: absolute;
-    left: 7.8rem;
-    top: 22rem;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .center {
-    width: 180px;
-    height: 60px;
-    position: absolute;
-  }
-
-  .btn {
-    width: 180px;
-    height: 30px;
-    cursor: pointer;
-    background: transparent;
-    border: 2px solid #91c9ff;
-    outline: none;
-    transition: 1s ease-in-out;
-    border-radius: 1rem;
-  }
-
-  .containerbtn .btn span {
-    font-size: 12px;
-  }
-
-  svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: rgb(253, 253, 253);
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-    border-radius: 1rem;
-  }
-
-  .btn:hover {
-    transition: 1s ease-in-out;
-    background: #39affe;
-  }
-
-  .btn:hover svg {
-    stroke-dashoffset: -480;
-  }
-
-  .btn span {
-    color: rgb(68, 71, 196);
-    font-size: 18px;
-    font-weight: 100;
-  }
-} */
-
-/* @media (max-width: 680px) {
-  .container {
-    background-image: none;
-    background-color: bisque;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .titlelanding h1 {
-    display: flex;
-    margin: 5rem 12rem 0 -15rem;
-    font-family: "Ubuntu";
-    font-size: 50px;
-  }
-
-  .titlelanding h3 {
-    position: absolute;
-    display: flex;
-    float: right;
-    margin: 2.5rem 13rem;
-    justify-content: flex-end;
-    font-family: "Ubuntu";
-    font-size: 45px;
-  }
-
-  .titlelanding p {
-    position: absolute;
-    display: flex;
-    margin: 15rem 2rem;
-    text-align: center;
-    font-size: 25px;
-    font-family: "Kanit";
-  }
-
-  .containerbtn {
-    position: absolute;
-    left: 22rem;
-    top: 44rem;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .center {
-    width: 180px;
-    height: 60px;
-    position: absolute;
-  }
-
-  .btn {
-    width: 180px;
-    height: 60px;
-    cursor: pointer;
-    background: transparent;
-    border: 2px solid #91c9ff;
-    outline: none;
-    transition: 1s ease-in-out;
-    border-radius: 1rem;
-  }
-
-  svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: rgb(253, 253, 253);
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-    border-radius: 1rem;
-  }
-
-  .btn:hover {
-    transition: 1s ease-in-out;
-    background: #39affe;
-  }
-
-  .btn:hover svg {
-    stroke-dashoffset: -480;
-  }
-
-  .btn span {
-    color: rgb(68, 71, 196);
-    font-size: 18px;
-    font-weight: 100;
-  }
-} */
-
-/* @media (max-width: 768px) {
-  .container {
-    background-image: none;
-    background-color: bisque;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .titlelanding h1 {
-    display: flex;
-    margin: 3.7rem 28rem 0 -15rem;
-    font-family: "Ubuntu";
-    font-size: 25px;
-  }
-
-  .titlelanding h3 {
-    position: absolute;
-    display: flex;
-    float: right;
-    margin: 2.5rem 11.5rem;
-    justify-content: flex-end;
-    font-family: "Ubuntu";
-    font-size: 20px;
-  }
-
-  .titlelanding p {
-    position: absolute;
-    display: flex;
-    margin: 8rem 4.2rem;
-    text-align: center;
-    font-size: 12px;
-    font-family: "Kanit";
-  }
-
-  .containerbtn {
-    position: absolute;
-    left: 18rem;
-    top: 20rem;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .center {
-    width: 180px;
-    height: 60px;
-    position: absolute;
-  }
-
-  .btn {
-    width: 80px;
-    height: 30px;
-    cursor: pointer;
-    background: transparent;
-    border: 2px solid #91c9ff;
-    outline: none;
-    transition: 1s ease-in-out;
-    border-radius: 1rem;
-  }
-
-  .containerbtn .btn span {
-    font-size: 12px;
-  }
-
-  svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: rgb(253, 253, 253);
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-    border-radius: 1rem;
-  }
-
-  .btn:hover {
-    transition: 1s ease-in-out;
-    background: #39affe;
-  }
-
-  .btn:hover svg {
-    stroke-dashoffset: -480;
-  }
-
-  .btn span {
-    color: rgb(68, 71, 196);
-    font-size: 18px;
-    font-weight: 100;
-  }
-} */
-
-/* @media (max-width: 940px) {
-  .container {
-    background-image: none;
-    background-color: bisque;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .titlelanding h1 {
-    display: flex;
-    margin: 3.7rem 28rem 0 -15rem;
-    font-family: "Ubuntu";
-    font-size: 25px;
-  }
-
-  .titlelanding h3 {
-    position: absolute;
-    display: flex;
-    float: right;
-    margin: 2.5rem 11.5rem;
-    justify-content: flex-end;
-    font-family: "Ubuntu";
-    font-size: 20px;
-  }
-
-  .titlelanding p {
-    position: absolute;
-    display: flex;
-    margin: 8rem 4.2rem;
-    text-align: center;
-    font-size: 12px;
-    font-family: "Kanit";
-  }
-
-  .containerbtn {
-    position: absolute;
-    left: 18rem;
-    top: 20rem;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .center {
-    width: 180px;
-    height: 60px;
-    position: absolute;
-  }
-
-  .btn {
-    width: 80px;
-    height: 30px;
-    cursor: pointer;
-    background: transparent;
-    border: 2px solid #91c9ff;
-    outline: none;
-    transition: 1s ease-in-out;
-    border-radius: 1rem;
-  }
-
-  .containerbtn .btn span {
-    font-size: 12px;
-  }
-
-  svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: rgb(253, 253, 253);
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-    border-radius: 1rem;
-  }
-
-  .btn:hover {
-    transition: 1s ease-in-out;
-    background: #39affe;
-  }
-
-  .btn:hover svg {
-    stroke-dashoffset: -480;
-  }
-
-  .btn span {
-    color: rgb(68, 71, 196);
-    font-size: 18px;
-    font-weight: 100;
-  }
-} */

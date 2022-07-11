@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "../../Styles/NotFound.module.css";
-import NotFoundImg from "../../images/tierra.gif";
+import styles from "../Styles/NotFound.module.css";
+import NotFoundImg from "../images/tierra.gif";
 
 const NotFound = () => {
   return (

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getCountries, postActivity } from "../../redux/actions";
-import styles from "../../Styles/Form.module.css";
-import imgHome from "../../images/menuForm.png";
+import { getCountries, postActivity } from "../redux/actions";
+import styles from "../Styles/Form.module.css";
+import imgHome from "../images/menuForm.png";
 
 const Form = () => {
   const dispatch = useDispatch();

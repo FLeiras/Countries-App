@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import styles from "../../Styles/Activity.module.css";
-import { deleteActivity, updateActivity } from "../../redux/actions";
+import styles from "../Styles/Activity.module.css";
+import { deleteActivity, updateActivity } from "../redux/actions";
 import { useState } from "react";
 
 const ActivityCard = (activity) => {

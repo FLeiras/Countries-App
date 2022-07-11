@@ -103,3 +103,9 @@ nav.fill ul li span:hover:after {
   -moz-animation: fill 1s forwards;
   opacity: 1;
 }
+
+@media (max-width: 420px) {
+  .text {
+    display: none;
+  }
+}
