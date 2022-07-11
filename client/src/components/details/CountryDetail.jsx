@@ -15,12 +15,9 @@ function CountryDetail() {
 
   useEffect(() => {
     dispatch(getCountryById(id));
-    /* return () => {
-      dispatch(clearState());
-    }; */
   }, [dispatch, id]);
 
-  if (!!country.img && loading) {
+  if (!country.img && loading) {
     setLoading(!loading);
   }
 

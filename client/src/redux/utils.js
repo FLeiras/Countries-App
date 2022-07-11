@@ -70,7 +70,3 @@ export const searchCountry = (name, arr) => {
       );
   }
 };
-
-export const populationFilter = (arr) => {
-  return arr.filter((c) => c.population > 100000000000000000000);
-};

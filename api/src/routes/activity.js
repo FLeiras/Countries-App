@@ -61,7 +61,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-/* router.put("/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
   try {
     const { id } = req.params;
     let updateActivity = await Activity.findOne({
@@ -87,6 +87,6 @@ router.delete("/:id", async (req, res) => {
   } catch (error) {
     res.status(400).send(error);
   }
-});*/
+});
 
 module.exports = router;
