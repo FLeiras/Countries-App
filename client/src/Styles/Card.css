@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap");
 
-.container {
+.container_cards {
   position: relative;
   width: 350px;
   display: flex;
@@ -12,7 +12,7 @@
   font-family: "Ubuntu";
 }
 
-.container .card {
+.container_cards .card {
   position: relative;
   max-width: 300px;
   height: 160px;
@@ -26,11 +26,11 @@
   transition: 0.3s ease-in-out;
   border-radius: 15px;
 }
-.container .card:hover {
+.container_cards .card:hover {
   height: 250px;
 }
 
-.container .card .image {
+.container_cards .card .image {
   position: relative;
   width: 260px;
   height: 300px;
@@ -39,13 +39,13 @@
   left: 8px;
 }
 
-.container .card .image img {
+.container_cards .card .image img {
   margin-left: -0.4rem;
   max-width: 100%;
   border-radius: 15px;
 }
 
-.container .card .content {
+.container_cards .card .content {
   position: relative;
   top: -100px;
   padding: 10px 15px;
@@ -57,7 +57,7 @@
   transition: 0.3s ease-in-out;
 }
 
-.container .card:hover .content {
+.container_cards .card:hover .content {
   margin-top: 30px;
   visibility: visible;
   opacity: 2;

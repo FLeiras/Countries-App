@@ -3,6 +3,7 @@
 .landing_container {
   background-image: url("../images/landing2.jpg");
   align-items: center;
+  justify-content: center;
   padding: 0;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -66,10 +67,18 @@
 }
 
 @media (max-width: 420px) {
+  .titlelanding {
+    display: flex;
+    float: right;
+    margin: 4.5rem 5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .titlelanding h1 {
     font-family: "Ubuntu";
     font-size: 40px;
-    margin: -5px 50px 50px 0px;
+    margin: -15px 10px 0px 10px;
   }
 
   .titlelanding h3 {
@@ -84,7 +93,7 @@
     font-size: 25px;
     font-family: "Kanit";
     margin-bottom: 50px;
-    margin-left: -50px;
+    margin-left: -5px;
   }
   .p_container {
     width: 250px;
@@ -92,7 +101,7 @@
 
   .btn {
     margin-top: -1rem;
-    margin-left: -2.5rem;
+    margin-left: 1rem;
     width: 150px;
     height: 40px;
     cursor: pointer;

@@ -71,7 +71,7 @@ function Home() {
   }
 
   return (
-    <div className={Styles.container}>
+    <div className={Styles.container_home}>
       <div className={Styles.nav_bar}>
         <Nav />
       </div>
@@ -137,7 +137,7 @@ function Home() {
           ))}
         </select>
       </div>
-      <div>
+      <div className={Styles.paginado_home}>
         {
           <Paginado
             countriesPerPage={countriesPerPage}
