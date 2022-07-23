@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.container {
+.container_home {
   background-image: url("../images/home3.jpg");
   align-items: center;
   padding: 0;

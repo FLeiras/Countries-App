@@ -102,6 +102,16 @@ const Form = () => {
     return error;
   }
 
+  let ordered = country.sort(function (a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+    return 0;
+  });
+
   return (
     <div className={styles.major}>
       <div className={styles.containerForm}>
@@ -256,8 +266,8 @@ const Form = () => {
                 </div>
                 <div className={styles.selectores}>
                   <select onChange={(e) => handleSelect(e)}>
-                    {country &&
-                      country.map((e, i) => (
+                    {ordered &&
+                      ordered.map((e, i) => (
                         <option value={e.name} key={e.id + i}>
                           {e.name}
                         </option>
@@ -283,11 +293,6 @@ const Form = () => {
               <div>
                 <button className={styles.submitbtn} type="submit">
                   Create
-                </button>
-              </div>
-              <div>
-                <button className={styles.submitbtnUp} type="submit">
-                  Update
                 </button>
               </div>
             </div>

@@ -5,24 +5,28 @@ import SearchBar from "./SearchBar";
 
 function Nav() {
   return (
-    <div className={Styles.navContainer}>
-      <nav className={Styles.stroke}>
-        <Link className={Styles.linkNav} to="/home">
-          <p className={Styles.text}>Country-Henry-App</p>
-        </Link>
+    <div className={Styles.nav_container}>
+      <Link to="/home">
+        <div className="nav_text">
+          <p>Country-Henry-App</p>
+        </div>
+      </Link>
+
+      <div className="links_nav">
         <ul>
           <Link to="/about">
             <li>
-              <span className={Styles.ab}>About Me</span>
+              <span>About Me</span>
             </li>
           </Link>
           <Link to="/post">
             <li>
-              <span className={Styles.crea}>Create your activity</span>
+              <span>Create your activity</span>
             </li>
           </Link>
         </ul>
-      </nav>
+      </div>
+
       <div>
         <SearchBar />
       </div>

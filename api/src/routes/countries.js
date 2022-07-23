@@ -40,7 +40,7 @@ router.get("/:id", async (req, res) => {
     });
     searchCountry
       ? res.json(searchCountry)
-      : res.status(404).send(`${idCountry} Doesnt Exist`);
+      : res.status(404).send(`${idCountry} No Existe`);
   } catch (error) {
     return res.status(500).send("ERROR", error);
   }
