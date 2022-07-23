@@ -4,7 +4,7 @@ import "../Styles/Card.css";
 
 function Card({ img, name, continent, population, id, subregion }) {
   return (
-    <div className="container">
+    <div className="container_cards">
       <div className="card">
         <div className="image">
           <Link to={"/home/" + id}>
